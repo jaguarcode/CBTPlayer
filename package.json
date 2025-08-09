@@ -10,7 +10,10 @@
     "dev:electron": "wait-on dist/main/index.js && electron . --dev",
     "build": "webpack --config webpack.config.js --mode production",
     "package": "electron-builder",
-    "test": "echo \"No tests configured for prototype\""
+    "test": "echo \"No tests configured for prototype\"",
+    "lint": "echo \"No linter configured for prototype\"",
+    "clean": "rimraf dist release",
+    "rebuild": "npm run clean && npm run build"
   },
   "keywords": [
     "cbt",
