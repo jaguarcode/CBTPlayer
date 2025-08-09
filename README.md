@@ -1,6 +1,6 @@
-# CBT Multimedia Synchronization Prototype
+# CBTPlayer - CBT Multimedia Synchronization Prototype
 
-A desktop application for synchronized playback of multiple media types (video, audio, subtitles, HTML) along a global timeline with variable playback speeds.
+Computer Based Training Content Player - A desktop application for synchronized playback of multiple media types (video, audio, subtitles, HTML) along a global timeline with variable playback speeds.
 
 ## Features
 
