@@ -1,0 +1,110 @@
+.debug-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.debug-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.debug-header h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #667eea;
+}
+
+.debug-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.debug-close:hover {
+  color: white;
+}
+
+.debug-content {
+  padding: 15px;
+}
+
+.debug-section {
+  margin-bottom: 15px;
+}
+
+.debug-section:last-child {
+  margin-bottom: 0;
+}
+
+.debug-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.debug-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.debug-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.debug-value {
+  color: white;
+  font-weight: bold;
+}
+
+.debug-value.playing {
+  color: #34c759;
+}
+
+.debug-value.paused {
+  color: #ff9500;
+}
+
+.debug-value.loaded {
+  color: #34c759;
+}
+
+.debug-value.not-loaded {
+  color: #ff3b30;
+}
+
+.debug-errors {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.debug-error {
+  padding: 5px;
+  margin-bottom: 5px;
+  background: rgba(255, 59, 48, 0.1);
+  border-left: 2px solid #ff3b30;
+  color: #ff3b30;
+  font-size: 11px;
+}

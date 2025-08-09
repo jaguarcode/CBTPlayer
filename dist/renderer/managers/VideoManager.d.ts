@@ -1,0 +1,43 @@
+import { TrackItem, TrackManager, SyncMetrics } from '../../types/index';
+export declare class VideoManager implements TrackManager {
+    private items;
+    private currentItemIndex;
+    private videoElement;
+    private containerElement;
+    private basePath;
+    private syncMetrics;
+    private driftHistory;
+    private readonly MAX_DRIFT_HISTORY;
+    private readonly SYNC_TOLERANCE;
+    private readonly MAX_SEEK_ADJUSTMENT;
+    private isBuffering;
+    private lastSyncTime;
+    private isSeeking;
+    private pendingSeek;
+    private loadingPromise;
+    private seekQueue;
+    private playPromise;
+    private lastSeekTime;
+    constructor(container?: HTMLElement);
+    private initializeContainer;
+    private createVideoElement;
+    private ensureVisible;
+    private setupFrameCallback;
+    load(items: TrackItem[], basePath?: string): Promise<void>;
+    private loadVideoAtIndex;
+    private getVideoUrl;
+    sync(masterTime: number, playbackRate: number): void;
+    private syncCurrentVideo;
+    private updateSyncMetrics;
+    play(): void;
+    pause(): void;
+    seek(timeMs: number): Promise<void>;
+    private performSeek;
+    private seekInCurrentVideo;
+    setPlaybackRate(rate: number): void;
+    getCurrentItem(): TrackItem | null;
+    getElement(): HTMLElement | null;
+    getSyncMetrics(): SyncMetrics;
+    destroy(): void;
+}
+//# sourceMappingURL=VideoManager.d.ts.map

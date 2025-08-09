@@ -1,0 +1,1 @@
+{"version":3,"file":"MediaViewer.d.ts","sourceRoot":"","sources":["../../../src/renderer/components/MediaViewer.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAkD,MAAM,OAAO,CAAC;AACvE,OAAO,mBAAmB,CAAC;AAE3B,MAAM,WAAW,iBAAiB;IAChC,cAAc,EAAE,cAAc,GAAG,IAAI,CAAC;IACtC,aAAa,EAAE,cAAc,GAAG,IAAI,CAAC;CACtC;AAED,QAAA,MAAM,WAAW,yEAmBf,CAAC;AAIH,eAAe,WAAW,CAAC"}

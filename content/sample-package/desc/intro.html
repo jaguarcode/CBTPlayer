@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            margin: 0;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 { font-size: 36px; margin-bottom: 20px; }
+        .demo-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: #4ade80;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 Welcome to CBT Demo</h1>
+    <div class="demo-info">
+        <h2>Multimedia Synchronization Demo</h2>
+        <p>This demonstration showcases synchronized playback of:</p>
+        <ul class="feature-list">
+            <li>High-quality video content</li>
+            <li>Synchronized audio narration</li>
+            <li>Real-time subtitles</li>
+            <li>Interactive HTML panels</li>
+            <li>Variable playback speeds</li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
+            Try changing the playback speed to see how all elements stay perfectly synchronized!
+        </p>
+    </div>
+</body>
+</html>

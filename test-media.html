@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Protocol Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        video, audio {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .status {
+            padding: 10px;
+            background: #333;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success { background: #2a4d2a; }
+        .error { background: #4d2a2a; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Content:// Protocol Media Test</h1>
+        
+        <h2>Video Test</h2>
+        <video id="videoPlayer" controls></video>
+        <div id="videoStatus" class="status">Loading video...</div>
+        
+        <h2>Audio Test</h2>
+        <audio id="audioPlayer" controls></audio>
+        <div id="audioStatus" class="status">Loading audio...</div>
+        
+        <h2>Test Results</h2>
+        <div id="results" class="status"></div>
+    </div>
+    
+    <script>
+        const videoPath = 'X:\\Workspace\\CBTPoc\\content\\sample-package\\videos\\intro.mp4';
+        const audioPath = 'X:\\Workspace\\CBTPoc\\content\\sample-package\\tts\\lesson-narration.mp3';
+        
+        const videoUrl = 'content://' + encodeURIComponent(videoPath.replace(/\\/g, '/'));
+        const audioUrl = 'content://' + encodeURIComponent(audioPath.replace(/\\/g, '/'));
+        
+        const videoPlayer = document.getElementById('videoPlayer');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const videoStatus = document.getElementById('videoStatus');
+        const audioStatus = document.getElementById('audioStatus');
+        const results = document.getElementById('results');
+        
+        let testResults = [];
+        
+        // Test video
+        videoStatus.textContent = 'Setting video source: ' + videoUrl;
+        videoPlayer.src = videoUrl;
+        
+        videoPlayer.addEventListener('loadedmetadata', () => {
+            videoStatus.className = 'status success';
+            videoStatus.textContent = `✓ Video loaded successfully! Duration: ${videoPlayer.duration.toFixed(2)}s`;
+            testResults.push('✓ Video loads with content:// protocol');
+            updateResults();
+        });
+        
+        videoPlayer.addEventListener('error', (e) => {
+            videoStatus.className = 'status error';
+            const error = videoPlayer.error;
+            videoStatus.textContent = `✗ Video error: ${error ? error.message : 'Unknown error'} (Code: ${error ? error.code : 'N/A'})`;
+            testResults.push('✗ Video failed to load');
+            updateResults();
+        });
+        
+        videoPlayer.addEventListener('progress', () => {
+            if (videoPlayer.buffered.length > 0) {
+                const buffered = videoPlayer.buffered.end(0);
+                console.log('Video buffered:', buffered.toFixed(2), 'seconds');
+            }
+        });
+        
+        // Test audio
+        audioStatus.textContent = 'Setting audio source: ' + audioUrl;
+        audioPlayer.src = audioUrl;
+        
+        audioPlayer.addEventListener('loadedmetadata', () => {
+            audioStatus.className = 'status success';
+            audioStatus.textContent = `✓ Audio loaded successfully! Duration: ${audioPlayer.duration.toFixed(2)}s`;
+            testResults.push('✓ Audio loads with content:// protocol');
+            updateResults();
+        });
+        
+        audioPlayer.addEventListener('error', (e) => {
+            audioStatus.className = 'status error';
+            const error = audioPlayer.error;
+            audioStatus.textContent = `✗ Audio error: ${error ? error.message : 'Unknown error'} (Code: ${error ? error.code : 'N/A'})`;
+            testResults.push('✗ Audio failed to load');
+            updateResults();
+        });
+        
+        audioPlayer.addEventListener('progress', () => {
+            if (audioPlayer.buffered.length > 0) {
+                const buffered = audioPlayer.buffered.end(0);
+                console.log('Audio buffered:', buffered.toFixed(2), 'seconds');
+            }
+        });
+        
+        // Test seeking (after metadata loaded)
+        videoPlayer.addEventListener('loadedmetadata', () => {
+            setTimeout(() => {
+                console.log('Testing video seek to 5 seconds...');
+                videoPlayer.currentTime = 5;
+                
+                videoPlayer.addEventListener('seeked', () => {
+                    testResults.push('✓ Video seeking works');
+                    updateResults();
+                }, { once: true });
+            }, 1000);
+        });
+        
+        audioPlayer.addEventListener('loadedmetadata', () => {
+            setTimeout(() => {
+                console.log('Testing audio seek to 10 seconds...');
+                audioPlayer.currentTime = 10;
+                
+                audioPlayer.addEventListener('seeked', () => {
+                    testResults.push('✓ Audio seeking works');
+                    updateResults();
+                }, { once: true });
+            }, 1000);
+        });
+        
+        function updateResults() {
+            results.innerHTML = '<h3>Summary:</h3>' + testResults.map(r => `<div>${r}</div>`).join('');
+            
+            if (testResults.filter(r => r.includes('✓')).length === 4) {
+                results.className = 'status success';
+                results.innerHTML += '<div><strong>All tests passed! Content:// protocol with byte-range support is working correctly.</strong></div>';
+            }
+        }
+        
+        // Log console messages
+        console.log('Video URL:', videoUrl);
+        console.log('Audio URL:', audioUrl);
+    </script>
+</body>
+</html>

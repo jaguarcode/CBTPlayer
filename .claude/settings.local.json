@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(dir:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm start)",
+      "Bash(wsl ls:*)",
+      "Bash(powershell:*)",
+      "Bash(node:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(npm install:*)",
+      "Bash(md5sum:*)",
+      "Bash(mv:*)",
+      "WebFetch(domain:developer.chrome.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(electron test-protocol.js)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

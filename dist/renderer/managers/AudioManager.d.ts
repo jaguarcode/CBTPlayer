@@ -1,0 +1,44 @@
+import { TrackItem, TrackManager, SyncMetrics } from '../../types/index';
+export declare class AudioManager implements TrackManager {
+    private volume;
+    private items;
+    private currentItemIndex;
+    private audioElement;
+    private audioContext;
+    private sourceNode;
+    private pitchShifter;
+    private gainNode;
+    private basePath;
+    private syncMetrics;
+    private driftHistory;
+    private readonly MAX_DRIFT_HISTORY;
+    private readonly SYNC_TOLERANCE;
+    private isBuffering;
+    private currentPlaybackRate;
+    private usePitchCorrection;
+    private playPromise;
+    private lastSeekTime;
+    private lastSeekTimestamp;
+    constructor(volume?: number);
+    private initializeAudioContext;
+    private createAudioElement;
+    private setupPitchShifter;
+    load(items: TrackItem[], basePath?: string): Promise<void>;
+    private loadAudioAtIndex;
+    private getAudioUrl;
+    sync(masterTime: number, playbackRate: number): void;
+    private syncCurrentAudio;
+    private updateSyncMetrics;
+    play(): void;
+    pause(): void;
+    seek(timeMs: number): Promise<void>;
+    private seekInCurrentAudio;
+    setPlaybackRate(rate: number): void;
+    setVolume(volume: number): void;
+    getCurrentItem(): TrackItem | null;
+    getElement(): HTMLElement | null;
+    getSyncMetrics(): SyncMetrics;
+    destroy(): void;
+    private recoverFromAudioError;
+}
+//# sourceMappingURL=AudioManager.d.ts.map

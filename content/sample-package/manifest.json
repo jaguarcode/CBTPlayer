@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "duration_ms": 90000,
+  "metadata": {
+    "title": "CBT Multimedia Demo - Internet Content",
+    "description": "Demo with real media content from the internet",
+    "author": "CBT System",
+    "created": "2025-08-08T03:50:03.834Z"
+  },
+  "tracks": [
+    {
+      "id": "main-video",
+      "type": "video",
+      "items": [
+        {
+          "id": "intro-video",
+          "file": "videos/intro.mp4",
+          "start_ms": 0,
+          "duration_ms": 30000,
+          "layer": 1
+        },
+        {
+          "id": "lesson-video",
+          "file": "videos/lesson.mp4",
+          "start_ms": 30000,
+          "duration_ms": 30000,
+          "layer": 1
+        },
+        {
+          "id": "outro-video",
+          "file": "videos/outro.mp4",
+          "start_ms": 60000,
+          "duration_ms": 30000,
+          "layer": 1
+        }
+      ]
+    },
+    {
+      "id": "narration",
+      "type": "audio",
+      "items": [
+        {
+          "id": "intro-narration",
+          "file": "tts/lesson-narration.mp3",
+          "start_ms": 0,
+          "duration_ms": 30000
+        },
+        {
+          "id": "lesson-narration",
+          "file": "tts/lesson-narration.mp3",
+          "start_ms": 30000,
+          "duration_ms": 30000
+        },
+        {
+          "id": "outro-narration",
+          "file": "tts/lesson-narration.mp3",
+          "start_ms": 60000,
+          "duration_ms": 30000
+        }
+      ]
+    },
+    {
+      "id": "subtitles",
+      "type": "subtitle",
+      "items": [
+        {
+          "id": "intro-subtitles",
+          "file": "subtitles/lesson.vtt",
+          "start_ms": 0,
+          "end_ms": 30000
+        },
+        {
+          "id": "lesson-subtitles",
+          "file": "subtitles/lesson.vtt",
+          "start_ms": 30000,
+          "end_ms": 60000
+        },
+        {
+          "id": "outro-subtitles",
+          "file": "subtitles/lesson.vtt",
+          "start_ms": 60000,
+          "end_ms": 90000
+        }
+      ]
+    },
+    {
+      "id": "descriptions",
+      "type": "html",
+      "items": [
+        {
+          "id": "intro-desc",
+          "file": "desc/intro.html",
+          "start_ms": 0,
+          "end_ms": 30000
+        },
+        {
+          "id": "lesson-desc",
+          "file": "desc/lesson.html",
+          "start_ms": 30000,
+          "end_ms": 60000
+        },
+        {
+          "id": "outro-desc",
+          "file": "desc/outro.html",
+          "start_ms": 60000,
+          "end_ms": 90000
+        }
+      ]
+    }
+  ]
+}

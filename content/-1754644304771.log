@@ -1,0 +1,220 @@
+ [Renderer] Starting application...
+ [Renderer] React app rendered
+ Electron Security Warning (Insecure Content-Security-Policy) This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.
+warnAboutInsecureCSP @ node:electron/js2c/sandbox_bundle:2
+ [App] Loading manifest with basePath: X:/Workspace/CBTPoc/content/sample-package
+ [App] Manifest tracks: Array(4)
+ [MasterClock] pause() called, isPlaying: false
+ [MasterClock] Already paused, returning
+ [MasterClock] Coordinated seek to: 0 ms
+ [App] Setting duration from manifest: 90000 ms
+ [MasterClock] All managers seek completed successfully
+ [App] Seek event to: 0 isPlaying: false
+ [App] Manifest loaded, initializing media managers...
+ [App] Initializing all media managers
+ [App] Media viewer containers: Object
+ [App] Creating Video.js manager
+ [VideoJsManager] Initializing container
+ [VideoJsManager] Initializing Video.js player
+ [MasterClock] Manager registered, total: 1
+ [App] Video.js manager initialized
+ [App] Re-enabling subtitle manager
+ [MasterClock] Manager registered, total: 2
+ [App] Re-enabling HTML manager
+ [HtmlManager] Initializing container
+ [HtmlManager] Iframe created with sandbox: Array(4)
+ An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+initializeContainer @ renderer.js:2
+ [HtmlManager] Container initialized, dimensions: Object
+ [HtmlManager] Showing placeholder
+ [App] HTML manager initialized
+ [App] Re-enabling audio manager (WebAudio API disabled)
+ [AudioManager] WebAudio API disabled for debugging
+ [MasterClock] Manager registered, total: 3
+ [App] Audio manager initialized
+ [VideoJsManager] Video.js player ready
+about:srcdoc:1 An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+ [App] Manager status after wait: Object
+ [App] Loading all media tracks
+ [App] Loading video track, items: 3
+ [App] First video item file: X:\Workspace\CBTPoc\content\sample-package\videos\intro.mp4
+ [App] VideoManager ref: t.VideoJsManager
+ [VideoJsManager] Loading items: 3
+ [VideoJsManager] Playlist built with 3 items
+ [VideoJsManager] Loading video at index: 0
+ [VideoJsManager] Metadata loaded, duration: 30.526667
+ [VideoJsManager] Video loaded successfully
+ [App] Video track loaded successfully
+ [App] Loading audio track, items: 3
+ [App] Audio track first item: Object
+ [AudioManager] Loading items: 3 basePath: X:/Workspace/CBTPoc/content/sample-package
+ [AudioManager] First item: Object
+ [AudioManager] Audio loading re-enabled (WebAudio API still disabled)
+ [AudioManager] Loading initial audio at index: 0
+ [AudioManager] Loading audio at index: 0 item: Object
+ [AudioManager] Getting audio URL for: X:\Workspace\CBTPoc\content\sample-package\tts\lesson-narration.mp3
+ [AudioManager] Using content:// URL with byte-range support: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+ [AudioManager] Audio file accessible: X:\Workspace\CBTPoc\content\sample-package\tts\lesson-narration.mp3
+ [AudioManager] Using basic HTML5 audio without Web Audio API
+ [AudioManager] Getting audio URL for: X:\Workspace\CBTPoc\content\sample-package\tts\lesson-narration.mp3
+ [AudioManager] Using content:// URL with byte-range support: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+ [AudioManager] Setting audio src to: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+ [AudioManager] Audio element src after setting: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+ [AudioManager] Called load() on audio element
+ [AudioManager] Audio metadata loaded successfully
+ [AudioManager] Audio duration: 31.656 seconds
+ [App] Audio track loaded successfully
+ [App] Loading HTML track, items: 3
+ [HtmlManager] Loading items: 3 basePath: X:/Workspace/CBTPoc/content/sample-package
+ [HtmlManager] First item: Object
+ [HtmlManager] HTML content loading re-enabled
+ [HtmlManager] Loading initial HTML content
+ [HtmlManager] Loading HTML content: X:\Workspace\CBTPoc\content\sample-package\desc\intro.html
+ [HtmlManager] Full item: {"id":"intro-desc","file":"X:\\Workspace\\CBTPoc\\content\\sample-package\\desc\\intro.html","start_ms":0,"end_ms":30000}
+ [HtmlManager] Fetching HTML from URL: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Fdesc%2Fintro.html
+ [HtmlManager] HTML content fetched, length: 1814
+ [HtmlManager] HTML content set via srcdoc
+ [App] HTML track loaded successfully
+ [App] Loading subtitle track, items: 3
+ [SubtitleManager] Loading items: 3 basePath: X:/Workspace/CBTPoc/content/sample-package
+ [SubtitleManager] First item: Object
+ [SubtitleManager] Subtitle loading re-enabled
+ [SubtitleManager] Loading initial subtitle at index: 0
+ [SubtitleManager] Loading subtitle at index: 0 file: X:\Workspace\CBTPoc\content\sample-package\subtitles\lesson.vtt
+about:srcdoc:1 An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+ [HtmlManager] Iframe loaded successfully
+ [HtmlManager] Iframe contentWindow: Window
+ [SubtitleManager] Loaded 15 cues
+ [App] Subtitle track loaded successfully
+ [App] Manifest loading complete. Tracks loaded: Object
+ [App] Initializing master clock with duration: 90000
+ [MasterClock] Initializing with duration: 90000 ms
+ [MasterClock] Initialized successfully
+ [App] Waiting 1 second before initial sync...
+ [VideoJsManager] Can play
+ [App] Syncing all media managers
+ [App] Current managers state: Object
+ [App] Syncing video manager
+ [App] Video element check: Object
+ [App] Syncing audio manager
+ [AudioManager] Starting audio playback during sync
+ [App] Syncing subtitle manager
+ [App] Syncing HTML manager
+ [App] All managers synced successfully
+ [VideoJsManager] Play event
+ [App] Seek started
+ [MasterClock] Coordinated seek to: 18865.153538050734 ms
+ [VideoJsManager] Coordinated seek to: 18865.153538050734 ms
+ [SubtitleManager] Coordinated seek to: 18865.153538050734 ms
+renderer.js:2 [SubtitleManager] Seek completed successfully
+renderer.js:2 [AudioManager] Seeking to: 18865.153538050734 ms
+renderer.js:2 [AudioManager] Setting audio time to: 18.865153538050734 seconds (master time: 18865.153538050734 ms)
+renderer.js:2 [AudioManager] Updating master clock from audio seek: 18865.153538050734
+renderer.js:2 [AudioManager] Audio seek completed to time: 18865.153538050734
+renderer.js:2 [App] Seek ended
+renderer.js:2 [VideoJsManager] Seeking video from 0.713007 to 18.865153538050734 seconds
+renderer.js:2 Audio buffering...
+renderer.js:2 [VideoJsManager] Seeking...
+renderer.js:2 [VideoJsManager] Buffering...
+renderer.js:2 [VideoJsManager] Seeked
+renderer.js:2 [VideoJsManager] Can play
+renderer.js:2 [VideoJsManager] Seek completed successfully to 18865.153538050734 ms
+renderer.js:2 [MasterClock] All managers seek completed successfully
+renderer.js:2 [App] Seek event to: 18865.153538050734 isPlaying: true
+renderer.js:2 [VideoJsManager] Coordinated seek to: 18865.153538050734 ms
+renderer.js:2 [AudioManager] Seeking to: 18865.153538050734 ms
+renderer.js:2 [AudioManager] Setting audio time to: 18.865153538050734 seconds (master time: 18865.153538050734 ms)
+renderer.js:2 [AudioManager] Updating master clock from audio seek: 18865.153538050734
+renderer.js:2 [AudioManager] Audio seek completed to time: 18865.153538050734
+renderer.js:2 [SubtitleManager] Coordinated seek to: 18865.153538050734 ms
+renderer.js:2 [SubtitleManager] Seek completed successfully
+renderer.js:2 [HtmlManager] Seek to: 18865.153538050734 ms
+renderer.js:2 [HtmlManager] Seek completed
+renderer.js:2 [VideoJsManager] Seeking video from 19.021286 to 18.865153538050734 seconds
+renderer.js:2 [EnhancedTimeline] Final MasterClock seek completed
+renderer.js:2 Audio buffering...
+renderer.js:2 [VideoJsManager] Seeking...
+renderer.js:2 [VideoJsManager] Buffering...
+renderer.js:2 [VideoJsManager] Seeked
+renderer.js:2 [VideoJsManager] Can play
+renderer.js:2 [VideoJsManager] Seek completed successfully to 18865.153538050734 ms
+renderer.js:2 [App] Seek started
+renderer.js:2 [MasterClock] Coordinated seek to: 37429.90654205607 ms
+renderer.js:2 [VideoJsManager] Coordinated seek to: 37429.90654205607 ms
+renderer.js:2 [SubtitleManager] Coordinated seek to: 37429.90654205607 ms
+renderer.js:2 [SubtitleManager] Loading subtitle at index: 1
+renderer.js:2 [SubtitleManager] Loading subtitle at index: 1 file: X:\Workspace\CBTPoc\content\sample-package\subtitles\lesson.vtt
+renderer.js:2 [AudioManager] Seeking to: 37429.90654205607 ms
+renderer.js:2 [AudioManager] Switching audio track for seek: 0 -> 1
+renderer.js:2 [AudioManager] Loading audio at index: 1 item: Object
+renderer.js:2 [AudioManager] Getting audio URL for: X:\Workspace\CBTPoc\content\sample-package\tts\lesson-narration.mp3
+renderer.js:2 [App] Seek ended
+renderer.js:2 [VideoJsManager] Loading video at index: 1 current: 0
+renderer.js:2 [VideoJsManager] Different video detected - disposing and recreating player
+renderer.js:2 [VideoJsManager] Player disposed successfully
+renderer.js:2 [AudioManager] Using content:// URL with byte-range support: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+renderer.js:2 [AudioManager] Audio file accessible: X:\Workspace\CBTPoc\content\sample-package\tts\lesson-narration.mp3
+renderer.js:2 [AudioManager] Using basic HTML5 audio without Web Audio API
+renderer.js:2 [AudioManager] Getting audio URL for: X:\Workspace\CBTPoc\content\sample-package\tts\lesson-narration.mp3
+renderer.js:2 Audio error: Event
+(anonymous) @ renderer.js:2
+renderer.js:2 [AudioManager] Attempting to recover from audio error
+renderer.js:2 [AudioManager] Using content:// URL with byte-range support: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+renderer.js:2 [AudioManager] Setting audio src to: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+renderer.js:2 [AudioManager] Audio element src after setting: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Ftts%2Flesson-narration.mp3
+renderer.js:2 [AudioManager] Called load() on audio element
+renderer.js:2 [SubtitleManager] Loaded 15 cues
+renderer.js:2 [SubtitleManager] Seek completed successfully
+renderer.js:2 [AudioManager] Audio metadata loaded successfully
+renderer.js:2 [AudioManager] Audio duration: 31.656 seconds
+renderer.js:2 [AudioManager] Waiting for audio to be ready...
+renderer.js:2 [AudioManager] Setting audio time to: 7.429906542056073 seconds (master time: 37429.90654205607 ms)
+renderer.js:2 [AudioManager] Updating master clock from audio seek: 37429.90654205607
+renderer.js:2 [AudioManager] Audio seek completed to time: 37429.90654205607
+renderer.js:2 [VideoJsManager] Initializing Video.js player (async)
+renderer.js:2 [VideoJsManager] Video.js player ready (async)
+renderer.js:2 [VideoJsManager] Loading video at index: 1
+renderer.js:2 [VideoJsManager] Metadata loaded, duration: 30.526667
+renderer.js:2 [VideoJsManager] Video loaded successfully
+renderer.js:2 [VideoJsManager] Seeking video from 0 to 7.429906542056073 seconds
+renderer.js:2 [VideoJsManager] Can play
+renderer.js:2 [VideoJsManager] Seeking...
+renderer.js:2 [AudioManager] Audio gentle recovery successful
+renderer.js:2 [VideoJsManager] Play event
+renderer.js:2 [VideoJsManager] Buffering...
+renderer.js:2 [VideoJsManager] Seeked
+renderer.js:2 [VideoJsManager] Can play
+renderer.js:2 [VideoJsManager] Seek completed successfully to 37429.90654205607 ms
+renderer.js:2 [MasterClock] All managers seek completed successfully
+renderer.js:2 [App] Seek event to: 37429.90654205607 isPlaying: true
+renderer.js:2 [VideoJsManager] Coordinated seek to: 37429.90654205607 ms
+renderer.js:2 [AudioManager] Seeking to: 37429.90654205607 ms
+renderer.js:2 [AudioManager] Setting audio time to: 7.429906542056073 seconds (master time: 37429.90654205607 ms)
+renderer.js:2 [AudioManager] Updating master clock from audio seek: 37429.90654205607
+renderer.js:2 [AudioManager] Audio seek completed to time: 37429.90654205607
+renderer.js:2 [SubtitleManager] Coordinated seek to: 37429.90654205607 ms
+renderer.js:2 [SubtitleManager] Seek completed successfully
+renderer.js:2 [HtmlManager] Seek to: 37429.90654205607 ms
+renderer.js:2 [HtmlManager] Loading HTML content: X:\Workspace\CBTPoc\content\sample-package\desc\lesson.html
+renderer.js:2 [HtmlManager] Full item: {"id":"lesson-desc","file":"X:\\Workspace\\CBTPoc\\content\\sample-package\\desc\\lesson.html","start_ms":30000,"end_ms":60000}
+renderer.js:2 [EnhancedTimeline] Final MasterClock seek completed
+renderer.js:2 [HtmlManager] Fetching HTML from URL: content://X%3A%2FWorkspace%2FCBTPoc%2Fcontent%2Fsample-package%2Fdesc%2Flesson.html
+renderer.js:2 [HtmlManager] HTML content fetched, length: 2384
+renderer.js:2 [HtmlManager] HTML content set via srcdoc
+renderer.js:2 [HtmlManager] Seek completed
+about:srcdoc:1 An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.
+renderer.js:2 [HtmlManager] Iframe loaded successfully
+renderer.js:2 [HtmlManager] Iframe contentWindow: Window
+renderer.js:2 [VideoJsManager] Seek completed successfully to 37429.90654205607 ms
+renderer.js:2 [VideoJsManager] Player initialization timeout - proceeding
+renderer.js:2 [MasterClock] pause() called, isPlaying: true
+renderer.js:2 [MasterClock] Emitting pause event
+renderer.js:2 [App] Pause event received
+renderer.js:2 [VideoJsManager] Pause event
